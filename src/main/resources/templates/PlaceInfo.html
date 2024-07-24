@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../static/css/bootstrap.css">
     <script src="../static/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=37a2bfeuno"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
         .navbar {
             background-color: skyblue;
@@ -60,10 +61,6 @@
             <a href="#">
                 <input type="button" value="예약하기" class="btn btn-info" onclick="showPayment();">
             </a>
-            <script language="javascript">
-                function showPayment() { window.open("SleepOnReservation.html", "예약 및 결제", "width=700, height=900, left=500, top=100"); }
-            </script>
-
         </div>
     </div>
     <br>
@@ -117,24 +114,12 @@
     <h4 id="location"><strong>위치</strong></h4>
     <div id="map" class="mb-3" style="width:86%;height:400px; border-radius: 10px;"></div>
     <b>경기도 고양 심학산로 628</b>
-    <script>
-        var mapOptions = {
-            center: new naver.maps.LatLng(37.716557, 126.761358),
-            zoom: 10
-        };
 
-        var map = new naver.maps.Map('map', mapOptions);
-
-        var marker = new naver.maps.Marker({
-            position: new naver.maps.LatLng(37.716557, 126.761358),
-            map: map
-        });
-    </script>
-
-<!--  리뷰  -->
+    <!--  리뷰  -->
     <hr>
     <h4><strong>후기</strong></h4>
     <hr>
 </div>
+<script type="text/javascript" src="PlaceInfo.js"></script>
 </body>
 </html>
