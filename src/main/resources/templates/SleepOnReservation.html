@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <style>
+        .navbar {
+            background-color: skyblue;
+        }
+
+        hr {
+            width: 86%;
+            height: 2px;
+            background-color: black;
+            border: 0;
+        }
+
+        #payment {
+            background-color: ghostwhite;
+            padding: 30px;
+            border-radius: 10px;
+
+        }
+
+        #button {
+            color: white;
+            width: 110px;
+            height: 50px;
+            border: 0;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        #button:hover {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm sticky-top" style="height: 70px;">
+    <div class="container">
+        <a href="#" class="navbar-brand" style="color:white;"><h3>sleepOn</h3></a>
+    </div>
+</nav>
+<div class="container">
+    <br>
+    <h3><strong>결제</strong></h3>
+    <br>
+    <div class="container mb-5 row" id="payment">
+        <div class="col-md-6">
+            <h3><b>숙박 시설 정보</b></h3>
+            <br>
+            <h6>숙박 시설명 : </h6>
+            <h6>주소 : </h6>
+            <h6>체크인 : </h6>
+            <h6>체크아웃 : </h6>
+        </div>
+        <div class="col-md-6">
+            <img src="img/no%20image.jpg" style="width: 200px; float: right; border-radius: 10px;">
+        </div>
+    </div>
+    <div class="container mb-10 row" id="payment">
+        <h3><b>결제 정보 입력</b></h3>
+        <div class="container">
+            <div class="input-form-background row">
+                <div class="input-form col-md-12 mx-auto">
+                    <form class="validation-form" novalidate>
+                            <div class="col-md-6 mb-3">
+                                <label for="name">예약자 이름</label>
+                                <input type="text" class="form-control" id="name" placeholder="" value="">
+                            </div>
+
+                        <div class="mb-3">
+                            <label for="email">이메일</label>
+                            <input type="email" class="form-control" id="email" placeholder="ex) sleepon@gmail.com"
+                                   required>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label for="number">방문 객수</label>
+                            <input type="number" class="form-control" id="number" placeholder="0">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="text">예약자 연락처</label>
+                            <input type="text" class="form-control" id="text" placeholder="ex)000-0000-0000">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="request">이용 전 요청사항</label>
+                            <input type="text" class="form-control" id="address2" placeholder="요청사항을 입력해주세요.">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label for="root">결제 수단 선택</label>
+                                <select class="custom-select" style="width:300px;" id="root">
+                                    <option value="">결제 수단을 선택해주세요.</option>
+                                    <option>신용/체크 카드</option>
+                                    <option>실시간 계좌이체</option>
+                                    <option>무통장 입금</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <input type="button" id="button" value="결제 진행" class="bg-info mt-5" style="margin-right: 25px;">
+    </div>
+
+</body>
+</html>
