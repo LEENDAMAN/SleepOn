@@ -20,28 +20,29 @@ function showPayment() {
 }
 
 // 숙박데이터 api
-function XMLParsing( data ) {
-    let XMLParser = new DOMParser();
-    let XMLDoc = XMLParser.parseFromString( data, "text/xml" )
-    let XMLItems = XMLDoc.getElementsByTagName( 'item' )
 
-    console.log( data )
-    for( let i = 0; i < XMLItems.length; i++)
-    {
-        console.log( XMLItems[i].getEle)
-    }
-}
-
-let endPoint = 'https://apis.data.go.kr/B551011/KorService1/searchStay1?'
-let params = {
-    serviceKey : ''
-}
-
-
-axios.get( `${ endPoint }serviceKey=Tz4pEua1s%2Fss1GwvvTZ6z3t3j1tZjR2E3Y9VDzIF2WXjOk9kuFOaqehg2ziipNO3g54cgug2%2Br3k92L4YrHs8g%3D%3D&numOfRows=1&pageNo=1&MobileOS=ETC&MobileApp=AppTest&listYN=Y&arrange=A` )
-    .then( res => {
-        if ( res.status === 200 )
-        {
-            XMLParsing( res.data )
-        }
-    } )
+// function XMLParsing( data ) {
+//     let XMLParser = new DOMParser();
+//     let XMLDoc = XMLParser.parseFromString( data, "text/xml" )
+//     let XMLItems = XMLDoc.getElementsByTagName( 'item' )
+//
+//     console.log( data )
+//     for( let i = 0; i < XMLItems.length; i++)
+//     {
+//         console.log( XMLItems[i].getEle)
+//     }
+// }
+//
+// let endPoint = 'https://apis.data.go.kr/B551011/KorService1/searchStay1?'
+// let params = {
+//     serviceKey : ''
+// }
+//
+//
+// axios.get( `${ endPoint }serviceKey=Tz4pEua1s%2Fss1GwvvTZ6z3t3j1tZjR2E3Y9VDzIF2WXjOk9kuFOaqehg2ziipNO3g54cgug2%2Br3k92L4YrHs8g%3D%3D&numOfRows=1&pageNo=1&MobileOS=ETC&MobileApp=AppTest&listYN=Y&arrange=A` )
+//     .then( res => {
+//         if ( res.status === 200 )
+//         {
+//             XMLParsing( res.data )
+//         }
+//     } )
